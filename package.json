@@ -6,6 +6,11 @@
   "engines": {
     "vscode": "^1.90.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JokerAn/autoNodejsVersion.git"
+  },
+  "publisher": "拂尘子",
   "categories": [
     "Other"
   ],
