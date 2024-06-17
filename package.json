@@ -2,19 +2,22 @@
   "name": "autonodejs",
   "displayName": "autoNodejs",
   "description": "自动化找到项目中的nodejs版本并自动切换",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.90.0"
   },
+  "发布地址": "https://marketplace.visualstudio.com/manage/publishers/jokeranautonodejsversion",
   "repository": {
     "type": "git",
     "url": "https://github.com/JokerAn/autoNodejsVersion.git"
   },
-  "publisher": "拂尘子",
+  "publisher": "jokeranAutoNodejsVersion",
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
@@ -27,7 +30,9 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "yarn run lint",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "build": "vsce package --no-yarn",
+    "fabu": "vsce publish -p jokeranAutoNodejsVersion"
   },
   "devDependencies": {
     "@types/vscode": "^1.90.0",
